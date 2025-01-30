@@ -8,6 +8,13 @@ As Dharmesh Shah, Founder and CTO at HubSpot, noted:
 
 This specification aims to bridge the gap between traditional human-oriented websites and the emerging ecosystem of AI agents, providing a standard way for websites to declare their agent capabilities and for agents to discover and interact with those capabilities.
 
+## Getting Started
+
+To create an agents.json file for your website, you can:
+- Follow the specification below manually
+- Use the provided prompt (`prompt.md`) with an LLM to generate a draft
+- Start from one of the examples and customize it
+
 ## Specification
 
 ### Discovery
@@ -103,11 +110,11 @@ See `examples/blog-agents.json` for the complete implementation.
 This is an early draft specification. All aspects are open for discussion and revision based on community feedback and real-world implementation experience.
 
 ## Contributing
-Have thoughts? Open an issue to discuss or post on x.com. 
+Have thoughts? Open an issue to discuss or [message me on x.com](https://x.com/jmilinovich). 
 - Use cases you're excited about
 - Challenges you foresee
 - Suggestions for improvement
 - Implementation ideas and examples
 - Additional real-world examples of agents.json implementations
 
-Let's shape this together!
+I for one, welcome our agent overlords.
