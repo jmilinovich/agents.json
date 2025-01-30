@@ -1,4 +1,4 @@
-# agents.json Specification (Draft)
+# agents.json Specification (RFC)
 
 ## Vision
 The web is evolving from a human-first interface to one that serves both humans and artificial agents. While protocols like robots.txt and sitemap.xml help web crawlers understand site structure, we lack a standardized way for websites to declare their agent-interaction capabilities. This specification defines agents.json, a protocol enabling websites to describe how artificial agents can interact with them programmatically and securely.
