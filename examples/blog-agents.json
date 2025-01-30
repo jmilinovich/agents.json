@@ -1,0 +1,86 @@
+{
+    "version": "1.0",
+    "site_info": {
+      "name": "John Milinovich's website",
+      "description": "Personal website and writing platform of Joe Milinovich",
+      "home_url": "https://jmilinovich.com"
+    },
+  
+    "authentication": {
+      "required": false
+    },
+  
+    "intents": {
+      "supported": [
+        {
+          "type": "read",
+          "description": "Access written content, including blog posts and articles",
+          "endpoints": [
+            {
+              "path": "/writing/posts",
+              "methods": ["GET"],
+              "description": "List all blog posts"
+            },
+            {
+              "path": "/writing/{slug}",
+              "methods": ["GET"],
+              "description": "Get a specific blog post by slug"
+            }
+          ],
+          "examples": [
+            {
+              "description": "List all posts",
+              "request": {
+                "method": "GET",
+                "path": "/writing/posts"
+              },
+              "response": {
+                "posts": [
+                  {
+                    "title": "Sample Post",
+                    "url": "/writing/sample-post",
+                    "date": "2024-01-30"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "subscribe",
+          "description": "Set up notifications for new content",
+          "endpoints": [
+            {
+              "path": "/subscribe",
+              "methods": ["POST"]
+            }
+          ],
+          "examples": [
+            {
+              "description": "Subscribe to new posts",
+              "request": {
+                "method": "POST",
+                "path": "/subscribe",
+                "body": {
+                  "type": "writing"
+                }
+              },
+              "response": {
+                "status": "subscribed"
+              }
+            }
+          ]
+        }
+      ]
+    },
+  
+    "policies": {
+      "rate_limits": {
+        "requests_per_minute": 60
+      },
+      "agent_identification": {
+        "required": true,
+        "method": "User-Agent header"
+      }
+    }
+  }
