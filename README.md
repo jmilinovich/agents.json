@@ -76,6 +76,29 @@ Intent types are free-form strings that describe the capability being offered. S
 
 These are suggestions only. The power of this specification lies in its flexibility to accommodate both current and future use cases.
 
+## Examples
+
+### E-commerce Site
+The repository includes an example agents.json for an e-commerce site (ExecuSystems) that demonstrates how to expose product browsing, shopping cart management, and checkout capabilities. Key features shown:
+
+- Product catalog browsing and search
+- Detailed product information retrieval
+- Shopping cart management
+- Checkout process
+- Customer service contact methods
+
+See `examples/shop-agents.json` for the complete implementation.
+
+### Personal Blog
+The repository also includes an example for a personal blog site that shows how to expose content reading and subscription capabilities. Key features shown:
+
+- Blog post listing and retrieval
+- Content subscription system
+- Simple authentication-free access
+- Clear rate limiting policies
+
+See `examples/blog-agents.json` for the complete implementation.
+
 ## Status
 This is an early draft specification. All aspects are open for discussion and revision based on community feedback and real-world implementation experience.
 
@@ -85,5 +108,6 @@ Have thoughts? Open an issue to discuss or post on x.com.
 - Challenges you foresee
 - Suggestions for improvement
 - Implementation ideas and examples
+- Additional real-world examples of agents.json implementations
 
 Let's shape this together!
