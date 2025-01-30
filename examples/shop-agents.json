@@ -1,0 +1,110 @@
+{
+    "version": "1.0",
+    "site_info": {
+      "name": "ExecuSystems",
+      "description": "Retail display fixtures and home organization products provider since 1985",
+      "home_url": "https://execusystems.com"
+    },
+  
+    "authentication": {
+      "required": false
+    },
+  
+    "intents": {
+      "supported": [
+        {
+          "type": "browse_products",
+          "description": "Browse and search product catalog",
+          "authentication_required": false,
+          "endpoints": [
+            {
+              "path": "/products",
+              "methods": ["GET"],
+              "description": "List all products with optional filtering"
+            },
+            {
+              "path": "/products/search",
+              "methods": ["GET"],
+              "description": "Search products by keyword"
+            }
+          ],
+          "examples": [
+            {
+              "description": "Search for rack products",
+              "request": {
+                "method": "GET",
+                "path": "/products/search?q=rack"
+              }
+            }
+          ]
+        },
+        {
+          "type": "product_details",
+          "description": "Get detailed information about specific products",
+          "authentication_required": false,
+          "endpoints": [
+            {
+              "path": "/products/{handle}",
+              "methods": ["GET"],
+              "description": "Get complete product information including variants, pricing, and availability"
+            }
+          ],
+          "examples": [
+            {
+              "description": "Get details for Acrylic Slatwall Display Bins",
+              "request": {
+                "method": "GET",
+                "path": "/products/acrylic-slatwall-display-bins"
+              }
+            }
+          ]
+        },
+        {
+          "type": "shopping_cart",
+          "description": "Manage shopping cart",
+          "authentication_required": false,
+          "endpoints": [
+            {
+              "path": "/cart",
+              "methods": ["GET", "POST", "PUT", "DELETE"],
+              "description": "View and modify shopping cart contents"
+            }
+          ]
+        },
+        {
+          "type": "checkout",
+          "description": "Process orders and complete purchases",
+          "authentication_required": false,
+          "endpoints": [
+            {
+              "path": "/checkout",
+              "methods": ["POST"],
+              "description": "Initialize checkout process"
+            }
+          ]
+        },
+        {
+          "type": "customer_service",
+          "description": "Get support and contact information",
+          "authentication_required": false,
+          "endpoints": [
+            {
+              "path": "/contact",
+              "methods": ["GET", "POST"],
+              "description": "Contact customer service (1-800-903-1294)"
+            }
+          ]
+        }
+      ]
+    },
+  
+    "policies": {
+      "rate_limits": {
+        "requests_per_minute": 60
+      },
+      "agent_identification": {
+        "required": true,
+        "method": "User-Agent header"
+      }
+    }
+  }
