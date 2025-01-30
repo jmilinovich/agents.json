@@ -80,10 +80,10 @@ These are suggestions only. The power of this specification lies in its flexibil
 This is an early draft specification. All aspects are open for discussion and revision based on community feedback and real-world implementation experience.
 
 ## Contributing
-Have thoughts? Open an issue to discuss:
+Have thoughts? Open an issue to discuss or post on x.com. 
 - Use cases you're excited about
 - Challenges you foresee
 - Suggestions for improvement
-- Implementation ideas
+- Implementation ideas and examples
 
 Let's shape this together!
